@@ -1,0 +1,26 @@
+.vorhang {
+    position: absolute;
+    z-index: 99;
+    display: grid;
+    grid-template-areas: 
+    "b b b"
+    "a d c"
+    "a d c";
+    cursor: pointer;
+}
+
+.vorhangL{
+grid-area: a;
+}
+
+.vorhangO{
+grid-area: b;
+}
+
+.vorhangR{
+grid-area: c;
+}
+
+.main{
+grid-area: d;
+}
