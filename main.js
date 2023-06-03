@@ -14,9 +14,4 @@ function vorhanghoch(){
     }
 }
 
-
-
-
-
-
 vorhangG.addEventListener("click",vorhanghoch);

@@ -10,8 +10,8 @@
 
 .container {
   padding: 0;
-  margin: auto;
-  margin-top: 35%;
+  margin-top: 50%;
+  grid-area: e;
   font-size: var(--cc-font-size);
   text-decoration: none;
   font-family: var(--cc-font-family);
@@ -98,19 +98,20 @@ body {
     z-index: 99;
     display: grid;
     grid-template-areas: 
-    "b b b b"
-    "a d d c"
-    "a d d c"
-    "a d d c";
+    "a a a"
+    "b c d"
+    "b e d"
+;
     cursor: pointer;
     width: 100%;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     background-color: black;
 }
 
 .vorhangL{
-    grid-area: a;
+    grid-area: b;
     margin-top:0;
     z-index: 98;
     position: absolute;
@@ -122,18 +123,26 @@ body {
     }
 
 .vorhangO{
-grid-area: b;
+grid-area: a;
 z-index: 99;
+background-position: center;
 position: absolute;
+justify-content: center;
+align-items: center;
 }
 
-.vorhangO img{
-    width:100%;
 
+.sw-links{
+  position: absolute;
+  width: 10%;
 }
-
+.sw-rechts{
+  position: absolute;
+  right:4rem;
+  width: 10%;
+}
 .vorhangR{
-    grid-area: c;
+    grid-area: d;
     right:0;
     z-index:98;
     position: absolute;
@@ -145,7 +154,7 @@ position: absolute;
     
 
 .vorhangG{
-grid-area: d;
+grid-area: c;
 margin-top:7%;
 margin-left: 7%;
 z-index:97;
@@ -171,11 +180,11 @@ animation-iteration-count: infinite;
 
 @keyframes jiggleLi {
     0% { transform: translateX(0%); } 
-    15% { transform: translateX(-1%) rotate(1deg); } 
-    30% { transform: translateX(0%) rotate(-1deg); } 
-    45% { transform: translateX(-2%) rotate(1deg); } 
+    15% { transform: translateX(-.1%) rotate(.1deg); } 
+    30% { transform: translateX(0%) rotate(-.1deg); } 
+    45% { transform: translateX(-.2%) rotate(.1deg); } 
     60% { transform: translateX(0%) rotate(0deg); }
-    75% { transform: translateX(-2%) rotate(-1deg); }
+    75% { transform: translateX(-.2%) rotate(-.1deg); }
     100% { transform: translateX(0%); } 
  } 
 
