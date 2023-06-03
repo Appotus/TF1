@@ -42,29 +42,105 @@
 .login-box .password-box {
   border: 1px solid green;
 }
-.vorhang {
-    position: absolute;
+body {
     z-index: 99;
     display: grid;
     grid-template-areas: 
-    "b b b"
-    "a d c"
-    "a d c";
+    "b b b b"
+    "a d d c"
+    "a d d c"
+    "a d d c";
     cursor: pointer;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
 
 .vorhangL{
-grid-area: a;
-}
+    grid-area: a;
+    margin-top:0;
+    z-index: 98;
+    position: absolute;
+    left:0;
+    }
+    
+    .vorhangL img{
+        width:100%;
+    }
 
 .vorhangO{
 grid-area: b;
+z-index: 99;
+position: absolute;
+}
+
+.vorhangO img{
+    width:100%;
+
 }
 
 .vorhangR{
-grid-area: c;
+    grid-area: c;
+    right:0;
+    z-index:98;
+    position: absolute;
+    }
+    
+    .vorhangG img{
+        width:100%;
+    }
+    
+
+.vorhangG{
+grid-area: d;
+margin-top:7%;
+margin-left: 7%;
+z-index:97;
+position: absolute;
 }
 
-.main{
-grid-area: d;
+.vorhangG img{
+    width:100%;
 }
+
+.oben {
+    transition: all 2.2s ease-out;
+    transform: translate3d(0,-100%,0);
+}
+
+.jiggleL {
+-webkit-animation-name: jiggleLi;
+animation-name: jiggleLi;
+-moz-animation-duration: 2s;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
+@keyframes jiggleLi {
+    0% { transform: translateX(0%); } 
+    15% { transform: translateX(-1%) rotate(1deg); } 
+    30% { transform: translateX(0%) rotate(-1deg); } 
+    45% { transform: translateX(-2%) rotate(1deg); } 
+    60% { transform: translateX(0%) rotate(0deg); }
+    75% { transform: translateX(-2%) rotate(-1deg); }
+    100% { transform: translateX(0%); } 
+ } 
+
+ .jiggleR {
+    -webkit-animation-name: jiggleRe;
+    animation-name: jiggleRe;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    }
+    
+    @keyframes jiggleRe {
+        0% { transform: translateX(0%); } 
+        15% { transform: translateX(0.25%) rotate(-0.2deg); } 
+        30% { transform: translateX(0%) rotate(0.4deg); } 
+        45% { transform: translateX(0.2%) rotate(-0.1deg); } 
+        60% { transform: translateX(0%) rotate(0deg); }
+        75% { transform: translateX(0.2%) rotate(-0.1deg); }
+        100% { transform: translateX(0%); } 
+     } 
