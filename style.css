@@ -5,42 +5,94 @@
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
   --cc-font-size: 16px;
+  --black: #000;
 }
 
 .container {
   padding: 0;
-  margin: 0;
+  margin: auto;
+  margin-top: 35%;
   font-size: var(--cc-font-size);
   text-decoration: none;
   font-family: var(--cc-font-family);
 }
 
 .container .login-box {
-  border: 1px solid var(--orange);
+  border: 1px solid var(--black);
   margin: auto;
-  width: 200px;
+  width: 300px;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   align-items: center;
   padding: 10px;
   background-color: var(--orange);
-  border-radius: 10%;
+  border-radius: 2rem;
   color: var(--white);
+  gap: 20px;
 }
 
 .login-box p {
   margin: 0;
 }
 
-.login-box .username-box {
-  border: 1px solid red;
+.input-box {
+  border: none;
+  border-radius: 0.1rem;
+  height: 1.2rem;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
-.login-box .password-box {
-  border: 1px solid green;
+.username-box {
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.password-box {
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-btn {
+  border-color: var(--white);
+  border-style: solid;
+  height: 2rem;
+  width: 5rem;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  color: var(--orange);
+  cursor: pointer;
+  border-width: 1px;
+}
+
+.signup-btn {
+  border-color: var(--orange);
+  border-style: solid;
+  border-width: 1px;
+  height: 2rem;
+  width: 5rem;
+  border-radius: 0.25rem;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  border-color: var(--white);
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.signup-btn:hover {
+  border-color: var(--white);
+  color: var(--white);
+  background-color: var(--orange);
+}
+.btn-container {
+  align-self: center;
 }
 body {
     z-index: 99;
